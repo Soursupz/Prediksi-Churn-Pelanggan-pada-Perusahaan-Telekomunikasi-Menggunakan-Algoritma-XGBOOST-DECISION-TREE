@@ -1,0 +1,11 @@
+import joblib
+
+# Contoh: Melatih model Random Forest
+from sklearn.ensemble import RandomForestClassifier
+rf = RandomForestClassifier(random_state=42)
+rf.fit(X_train, y_train)
+
+# Simpan model ke file .pkl
+joblib.dump(rf, 'rf_model.pkl')
+joblib.dump(dt_model, 'dt_model.pkl')
+joblib.dump(xgb_clf, 'xgb_model.pkl')
