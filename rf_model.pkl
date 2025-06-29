@@ -1,9 +1,9 @@
 import joblib
 
 # Contoh: Melatih model Random Forest
-from sklearn.ensemble import RandomForestClassifier
-rf = RandomForestClassifier(random_state=42)
-rf.fit(X_train, y_train)
+from sklearn.tree import DecisionTreeClassifier
+dt_model = DecisionTreeClassifier(max_leaf_nodes=5, random_state=42)
+dt_model.fit(X_train, y_train)
 
 # Simpan model ke file .pkl
 joblib.dump(rf, 'rf_model.pkl')
